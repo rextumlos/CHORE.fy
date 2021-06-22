@@ -1,0 +1,34 @@
+package com.example.chorefy;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ImageButton;
+
+public class activity_home_page extends AppCompatActivity {
+
+    private ImageButton featuresBtn, settingsBtn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        featuresBtn = (ImageButton) findViewById(R.id.imgBtnFeatures);
+        featuresBtn.setOnClickListener(v -> openFeaturesActivity());
+
+        settingsBtn = (ImageButton) findViewById(R.id.imgBtnSettings);
+        settingsBtn.setOnClickListener(v -> openSettingsActivity());
+    }
+
+    public void openFeaturesActivity(){
+        Intent intent = new Intent(this, activity_features_page.class);
+        startActivity(intent);
+    }
+
+    public void openSettingsActivity(){
+        Intent intent = new Intent(this, activity_settings_page.class);
+        startActivity(intent);
+    }
+}
