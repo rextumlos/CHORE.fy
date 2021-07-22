@@ -21,13 +21,13 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:background="@android:color/white"
+            android:background="@drawable/button_border"
             android:contentDescription="@null"
             android:padding="26dp"
             android:scaleType="fitCenter"
 
-            app:srcCompat="@drawable/menu_icon" />
 
+            app:srcCompat="@drawable/menu_icon" />
 
 
 
@@ -36,10 +36,11 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1.5"
-            android:background="@android:color/white"
+            android:background="@drawable/button_border"
             android:contentDescription="@null"
 
             app:srcCompat="@drawable/home_icon" />
+
 
 
         <ImageButton
@@ -47,10 +48,12 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:background="@color/light_teal"
+            android:background="@drawable/button_border"
+            android:backgroundTint="@color/dark_teal"
             android:contentDescription="@null"
             android:padding="19dp"
             android:scaleType="fitCenter"
+            android:tint="@color/white"
             app:srcCompat="@drawable/settings_icon" />
 
     </LinearLayout>
@@ -62,8 +65,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
         android:layout_marginBottom="70dp"
         android:orientation="vertical">
 
@@ -87,37 +88,36 @@
             android:background="@color/dark_teal" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
             android:orientation="horizontal">
 
             <ImageView
+
                 android:layout_marginTop="7dp"
+
                 android:id="@+id/image_view_night_mode"
                 android:contentDescription="@null"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="30dp"
-
                 app:srcCompat="@drawable/night_mode_icon"
                 app:tint="@color/dark_gray" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch_night_mode"
-                android:layout_width="292dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
 
                 android:layout_marginStart="0dp"
 
                 android:layout_marginTop="10dp"
+
                 android:layout_marginEnd="30dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="15dp"
                 android:text="@string/night_mode_string"
                 android:textColor="@color/dark_gray"
-
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -129,8 +129,6 @@
             android:layout_marginEnd="30dp"
             android:layout_marginTop="0dp"
             android:background="@color/light_gray" />
-
-
 
         <TextView
             android:id="@+id/text_view_notifications"
@@ -168,7 +166,8 @@
                     android:id="@+id/switch_notifications"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
                     android:text="@string/on_notifications_string"
                     android:textColor="@color/dark_gray"
                     android:textSize="20sp" />
@@ -177,6 +176,7 @@
                     android:id="@+id/switch_pop_up"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:text="@string/pop_up_string"
                     android:textColor="@color/dark_gray"
                     android:textSize="20sp" />
@@ -185,6 +185,7 @@
                     android:id="@+id/switch_sound"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:text="@string/sound_string"
                     android:textColor="@color/dark_gray"
                     android:textSize="20sp" />
@@ -193,6 +194,7 @@
                     android:id="@+id/switch_vibrate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
                     android:text="@string/vibrate_string"
                     android:textColor="@color/dark_gray"
                     android:textSize="20sp" />
@@ -249,7 +251,6 @@
             android:text="Michael Ken Revil\nJericho Carl Tismo\nJohn Rexpearl Tumlos"
             android:textColor="@color/dark_gray"
             android:textSize="14sp" />
-
 
     </LinearLayout>
 

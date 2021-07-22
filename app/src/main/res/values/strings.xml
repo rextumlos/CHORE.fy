@@ -1,9 +1,6 @@
 <resources>
     <string name="app_name">CHORE.fy</string>
 
-    <string name="features">FEATURES</string>
-
-
     <!--Features Page-->
     <string name="features_page_title">FEATURES</string>
 
@@ -21,4 +18,7 @@
     <string name="about_title">About</string>
     <string name="developers_title">Developers:</string>
 
+    <!--Task Assigner Page-->
+    <string name="task_assigner_title">TASK ASSIGNER</string>
+    <string name="cancel_string">Cancel</string>
 </resources>
