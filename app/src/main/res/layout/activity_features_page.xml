@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEEEEE"
-    tools:context=".activity_home_page">
+    tools:context=".activity_features_page">
 
+    <!--Navigation Buttons-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +23,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:background="#3AAFA9"
+            android:background="@color/light_teal"
             android:contentDescription="@null"
             android:padding="26dp"
             android:scaleType="fitCenter"
@@ -37,7 +38,7 @@
             android:background="@android:color/white"
             android:contentDescription="@null"
             app:srcCompat="@drawable/home_icon"
-            android:tint="#3AAFA9"/>
+            android:tint="@color/light_teal"/>
 
         <ImageButton
             android:id="@+id/imgBtnSettings"
@@ -49,7 +50,7 @@
             android:padding="19dp"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/settings_icon"
-            android:tint="#3AAFA9"/>
+            android:tint="@color/light_teal"/>
 
     </LinearLayout>
 
@@ -62,8 +63,8 @@
         android:layout_marginTop="15dp"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#696969"
-        android:text="FEATURES" />
+        android:textColor="@color/dark_gray"
+        android:text="@string/features_page_title" />
 
     <View
         android:layout_width="match_parent"
@@ -73,6 +74,6 @@
         android:layout_marginTop="55dp"
         android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
-        android:background="#2B7A87" />
+        android:background="@color/dark_teal" />
 
 </RelativeLayout>
