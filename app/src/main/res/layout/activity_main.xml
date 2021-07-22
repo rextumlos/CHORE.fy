@@ -81,6 +81,16 @@
     </LinearLayout>
 
     <!--Add Task Button-->
-
+    <Button
+        android:id="@+id/button_add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/radius_border_button"
+        android:drawableLeft="@drawable/plus_icon"
+        android:text="@string/add_task_string"
+        android:textSize="20sp"/>
 
 </RelativeLayout>

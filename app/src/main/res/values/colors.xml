@@ -11,6 +11,7 @@
     <!--New Colors-->
     <color name="light_teal">#3AAFA9</color>
     <color name="dark_teal">#2B7A87</color>
+    <color name="darker_teal">#1B4E56</color>
     <color name="light_gray">#C0C0C0</color>
     <color name="dark_gray">#696969</color>
 </resources>

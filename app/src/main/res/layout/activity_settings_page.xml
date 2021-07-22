@@ -96,7 +96,6 @@
 
             <ImageView
                 android:layout_marginTop="7dp"
-
                 android:id="@+id/image_view_night_mode"
                 android:contentDescription="@null"
                 android:layout_width="60dp"
@@ -156,7 +155,7 @@
                 android:layout_height="55dp"
                 android:layout_marginStart="38dp"
                 android:layout_marginEnd="12dp"
-                android:src="@drawable/notification_icon"
+                android:src="@drawable/notifications_icon"
                 app:tint="@color/dark_gray"/>
 
             <LinearLayout
