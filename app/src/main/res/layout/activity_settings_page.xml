@@ -71,7 +71,7 @@
             android:layout_gravity="center"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="#696969"
             android:text="SETTINGS" />
 
         <View

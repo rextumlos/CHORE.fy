@@ -27,7 +27,8 @@
             android:contentDescription="@null"
             android:padding="26dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/menu_icon" />
+            app:srcCompat="@drawable/menu_icon"
+            android:tint="#3AAFA9"/>
 
         <ImageButton
             android:id="@+id/imgBtnHome"
@@ -36,7 +37,8 @@
             android:layout_weight="1.5"
             android:background="#3AAFA9"
             android:contentDescription="@null"
-            app:srcCompat="@drawable/home_icon" />
+            app:srcCompat="@drawable/home_icon"
+            android:tint="@android:color/white"/>
 
         <ImageButton
             android:id="@+id/imgBtnSettings"
@@ -47,7 +49,8 @@
             android:contentDescription="@null"
             android:padding="19dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/settings_icon" />
+            app:srcCompat="@drawable/settings_icon"
+            android:tint="#3AAFA9"/>
 
     </LinearLayout>
 
@@ -60,7 +63,7 @@
         android:layout_marginTop="15dp"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="#696969"
         android:text="CHORE.fy" />
 
     <View
