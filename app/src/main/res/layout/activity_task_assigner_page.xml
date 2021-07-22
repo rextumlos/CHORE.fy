@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEEEEE"
-    tools:context=".activity_home_page">
+    tools:context=".activity_task_assigner_page">
 
     <!--Navigation Buttons-->
     <LinearLayout
@@ -16,40 +16,29 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imgBtnFeatures"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
-            android:contentDescription="@null"
-            android:padding="26dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/menu_icon"
-            android:tint="@color/dark_teal"/>
-
-        <ImageButton
-            android:id="@+id/imgBtnHome"
+        <Button
+            android:id="@+id/btnCancel"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1.5"
             android:background="@drawable/button_border"
-            android:backgroundTint="@color/dark_teal"
             android:contentDescription="@null"
-            app:srcCompat="@drawable/home_icon"
-            android:tint="@android:color/white"/>
+            android:scaleType="fitCenter"
+            android:text="@string/cancel_string"
+            android:textColor="@color/dark_teal"
+            android:textSize="20sp"/>
 
-        <ImageButton
-            android:id="@+id/imgBtnSettings"
+        <Button
+            android:id="@+id/btnSave"
             android:layout_width="0dp"
             android:layout_height="70dp"
-            android:layout_weight="1"
+            android:layout_weight="2.5"
             android:background="@drawable/button_border"
+            android:backgroundTint="@color/dark_teal"
             android:contentDescription="@null"
-            android:padding="19dp"
-            android:scaleType="fitCenter"
-            android:tint="@color/dark_teal"
-            app:srcCompat="@drawable/settings_icon" />
+            android:text="@string/add_task_string"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -69,7 +58,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/dark_gray"
-            android:text="@string/app_name" />
+            android:text="@string/task_assigner_title" />
 
         <View
             android:layout_width="match_parent"
@@ -80,18 +69,5 @@
             android:background="@color/dark_teal" />
 
     </LinearLayout>
-
-    <!--Add Task Button-->
-    <Button
-        android:id="@+id/btnAddTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:background="@drawable/radius_border_button"
-        android:drawableStart="@drawable/plus_icon"
-        android:text="@string/add_task_string"
-        android:textSize="20sp"/>
 
 </RelativeLayout>
