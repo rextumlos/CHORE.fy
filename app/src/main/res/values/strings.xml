@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">CHORE.fy</string>
 
+    <string name="features">FEATURES</string>
+
+
     <!--Features Page-->
     <string name="features_page_title">FEATURES</string>
 
@@ -17,4 +20,5 @@
     <string name="vibrate_string">Vibrate</string>
     <string name="about_title">About</string>
     <string name="developers_title">Developers:</string>
+
 </resources>
