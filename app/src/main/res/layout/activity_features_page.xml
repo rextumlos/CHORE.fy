@@ -6,28 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEEEEE"
-
     tools:context=".activity_home_page">
 
-    tools:context=".activity_features_page">
-
     <!--Navigation Buttons-->
-
     <LinearLayout
         android:id="@+id/mainBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="0dp"
-
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
-        android:orientation="horizontal">
-
 
         <ImageButton
             android:id="@+id/imgBtnFeatures"
@@ -38,8 +30,7 @@
             android:contentDescription="@null"
             android:padding="26dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/menu_icon"
-            android:tint="@android:color/white"/>
+            app:srcCompat="@drawable/menu_icon"/>
 
         <ImageButton
             android:id="@+id/imgBtnHome"
@@ -48,8 +39,7 @@
             android:layout_weight="1.5"
             android:background="@android:color/white"
             android:contentDescription="@null"
-            app:srcCompat="@drawable/home_icon"
-            android:tint="@color/light_teal"/>
+            app:srcCompat="@drawable/home_icon" />
 
         <ImageButton
             android:id="@+id/imgBtnSettings"
@@ -60,8 +50,7 @@
             android:contentDescription="@null"
             android:padding="19dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/settings_icon"
-            android:tint="@color/light_teal"/>
+            app:srcCompat="@drawable/settings_icon" />
 
     </LinearLayout>
 
@@ -69,7 +58,6 @@
         android:id="@+id/text_view_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="15dp"
         android:text="@string/features"
         android:textColor="@color/black"
@@ -92,22 +80,18 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Feature Buttons-->
     <GridLayout
-        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="100dp"
-        android:columnCount="2"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="260dp"
+        android:layout_marginHorizontal="20dp"
         android:rowCount="2"
-        app:layout_constraintBottom_toTopOf="@+id/mainBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_settings">
-
+        android:columnCount="2">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardRecipe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -115,64 +99,61 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FFF"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardElevation="8dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="160dp"
+                    android:layout_height="175dp"
                     android:contentDescription="@null"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/recipe_icon_feature" />
+                    android:src="@drawable/recipe_icon_feature" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardGrocery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:layout_column="1"
-
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FFF"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardElevation="8dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout2"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="160dp"
+                    android:layout_height="175dp"
                     android:contentDescription="@null"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/grocery_icon_feature" />
+                    android:src="@drawable/grocery_icon_feature" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardPayment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -180,51 +161,33 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FFF"
             app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
-            app:cardUseCompatPadding="true">
+            app:cardElevation="8dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout3"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
+                    android:layout_width="160dp"
+                    android:layout_height="175dp"
                     android:contentDescription="@null"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@drawable/payment_icon_feature" />
+                    android:src="@drawable/payment_icon_feature" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/dark_gray"
-        android:text="@string/features_page_title" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:background="@color/dark_teal" />
 
-</RelativeLayout>
+
 
