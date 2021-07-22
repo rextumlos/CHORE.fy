@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">CHORE.fy</string>
+
     <string name="features">FEATURES</string>
+
+
+    <!--Features Page-->
+    <string name="features_page_title">FEATURES</string>
+
+    <!--Main Page-->
+    <string name="add_task_string">Add Task</string>
+
+    <!--Settings Page-->
+    <string name="settings_page_title">SETTINGS</string>
+    <string name="night_mode_string">Night Mode</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="on_notifications_string">Turn On Notifications</string>
+    <string name="pop_up_string">Pop-up</string>
+    <string name="sound_string">Sound</string>
+    <string name="vibrate_string">Vibrate</string>
+    <string name="about_title">About</string>
+    <string name="developers_title">Developers:</string>
+
 </resources>

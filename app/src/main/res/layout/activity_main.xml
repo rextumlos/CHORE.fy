@@ -7,15 +7,13 @@
     android:background="#EEEEEE"
     tools:context=".activity_home_page">
 
-
+    <!--Navigation Buttons-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="0dp"
         android:orientation="horizontal">
 
         <ImageButton
@@ -27,16 +25,18 @@
             android:contentDescription="@null"
             android:padding="26dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/menu_icon" />
+            app:srcCompat="@drawable/menu_icon"
+            android:tint="@color/light_teal"/>
 
         <ImageButton
             android:id="@+id/imgBtnHome"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1.5"
-            android:background="#3AAFA9"
+            android:background="@color/light_teal"
             android:contentDescription="@null"
-            app:srcCompat="@drawable/home_icon" />
+            app:srcCompat="@drawable/home_icon"
+            android:tint="@android:color/white"/>
 
         <ImageButton
             android:id="@+id/imgBtnSettings"
@@ -47,30 +47,50 @@
             android:contentDescription="@null"
             android:padding="19dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/settings_icon" />
+            app:srcCompat="@drawable/settings_icon"
+            android:tint="@color/light_teal"/>
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_view_settings"
+    <!--Page Action Bar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            android:text="@string/app_name" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:background="@color/dark_teal" />
+
+    </LinearLayout>
+
+    <!--Add Task Button-->
+    <Button
+        android:id="@+id/button_add_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="CHORE.fy" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:background="#2B7A87" />
+        android:layout_centerInParent="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/radius_border_button"
+        android:drawableLeft="@drawable/plus_icon"
+        android:text="@string/add_task_string"
+        android:textSize="20sp"/>
 
 </RelativeLayout>

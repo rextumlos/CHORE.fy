@@ -24,11 +24,13 @@ public class activity_settings_page extends AppCompatActivity {
 
     public void openFeaturesActivity(){
         Intent intent = new Intent(this, activity_features_page.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }
 
     public void openHomeActivity(){
         Intent intent = new Intent(this, activity_home_page.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }
 }
