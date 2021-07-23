@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
 
-        <activity android:name=".activity_task_assigner_page"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity_settings_page"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity_features_page"
-            android:screenOrientation="portrait" />
-        <activity android:name=".activity_home_page">
-            android:screenOrientation="portrait"
+        <activity android:name=".activity_settings_page"
+            android:screenOrientation="fullSensor" />
+
+        <activity android:name=".activity_features_page"
+            android:screenOrientation="fullSensor" />
+
+        <activity android:name=".activity_home_page"
+            android:screenOrientation="fullSensor">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
