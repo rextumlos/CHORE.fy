@@ -26,7 +26,9 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:background="@color/light_teal"
+            android:background="@drawable/button_border"
+            android:backgroundTint="@color/dark_teal"
+            android:tint="@color/white"
             android:contentDescription="@null"
             android:padding="26dp"
             android:scaleType="fitCenter"
@@ -37,7 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1.5"
-            android:background="@android:color/white"
+            android:background="@drawable/button_border"
             android:contentDescription="@null"
             app:srcCompat="@drawable/home_icon" />
 
@@ -46,7 +48,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:background="@android:color/white"
+            android:background="@drawable/button_border"
             android:contentDescription="@null"
             android:padding="19dp"
             android:scaleType="fitCenter"
@@ -117,7 +119,7 @@
                     android:layout_width="160dp"
                     android:layout_height="175dp"
                     android:contentDescription="@null"
-                    android:src="@drawable/recipe_icon_feature" />
+                    app:srcCompat="@drawable/recipe_icon_feature" />
 
             </LinearLayout>
 
@@ -148,7 +150,7 @@
                     android:layout_width="160dp"
                     android:layout_height="175dp"
                     android:contentDescription="@null"
-                    android:src="@drawable/grocery_icon_feature" />
+                    app:srcCompat="@drawable/grocery_icon_feature" />
 
             </LinearLayout>
 
@@ -179,7 +181,7 @@
                     android:layout_width="160dp"
                     android:layout_height="175dp"
                     android:contentDescription="@null"
-                    android:src="@drawable/payment_icon_feature" />
+                    app:srcCompat="@drawable/payment_icon_feature" />
 
             </LinearLayout>
 
