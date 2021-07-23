@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
 
-        <activity android:name=".activity_payment_page"></activity>
+        <activity android:name=".activity_payment_page" />
         <activity android:name=".activity_recipe_page" />
         <activity android:name=".startup_splash_activity">
 
@@ -23,16 +23,16 @@
         </activity>
         <activity
             android:name=".activity_grocery"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity_settings_page"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity_features_page"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity_home_page"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
