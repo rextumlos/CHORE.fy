@@ -5,13 +5,16 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.Objects;
+
+import static com.google.android.material.internal.ContextUtils.getActivity;
+
 public class activity_features_page extends AppCompatActivity {
 
-    private ImageButton homeBtn, settingsBtn;
     CardView cardRecipe;
     CardView cardGrocery;
     CardView cardPayment;
@@ -21,37 +24,23 @@ public class activity_features_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_features_page);
 
-        homeBtn = (ImageButton) findViewById(R.id.imgBtnHome);
+        ImageButton homeBtn = (ImageButton) findViewById(R.id.imgBtnHome);
         homeBtn.setOnClickListener(v -> openHomeActivity());
 
-        settingsBtn = (ImageButton) findViewById(R.id.imgBtnSettings);
+        ImageButton settingsBtn = (ImageButton) findViewById(R.id.imgBtnSettings);
         settingsBtn.setOnClickListener(v -> openSettingsActivity());
 
         cardRecipe = findViewById(R.id.cardRecipe);
         cardGrocery = findViewById(R.id.cardGrocery);
         cardPayment = findViewById(R.id.cardPayment);
 
-        cardRecipe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showToast("Recipe Clicked");
-            }
-        });
+        cardRecipe.setOnClickListener(view -> showToast("Recipe Clicked"));
 
-        cardGrocery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showToast("Grocery Clicked");
-            }
-        });
+        cardGrocery.setOnClickListener(view -> openGroceryActivity());
 
-        cardPayment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showToast("Payment Clicked");
-            }
-        });
+        cardPayment.setOnClickListener(view -> showToast("Payment Clicked"));
     }
+
 
     public void openHomeActivity(){
         Intent intent = new Intent(this, activity_home_page.class);
@@ -69,4 +58,10 @@ public class activity_features_page extends AppCompatActivity {
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+
+    public void openGroceryActivity(){
+        Intent intent = new Intent(this, activity_grocery.class);
+        startActivity(intent);
+    }
+
 }

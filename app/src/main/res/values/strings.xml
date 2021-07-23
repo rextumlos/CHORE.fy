@@ -22,4 +22,5 @@
     <string name="task_assigner_title">TASK ASSIGNER</string>
     <string name="cancel_string">Cancel</string>
     <string name="features">FEATURES</string>
+    <string name="grocery_list_page">GROCERY LIST</string>
 </resources>

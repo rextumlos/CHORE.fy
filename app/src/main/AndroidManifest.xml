@@ -4,28 +4,41 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
 
-        <activity android:name=".activity_settings_page"
-            android:screenOrientation="fullSensor" />
-
-        <activity android:name=".activity_features_page"
-            android:screenOrientation="fullSensor" />
-
-        <activity android:name=".activity_home_page"
-            android:screenOrientation="fullSensor">
-
-
+        <activity android:name=".startup_splash_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity_grocery"
+            android:screenOrientation="fullSensor"/>
+
+        <activity
+            android:name=".activity_settings_page"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".activity_features_page"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".activity_task_assigner_page"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".activity_home_page"
+            android:screenOrientation="fullSensor">
+        </activity>
+
     </application>
 
 </manifest>
