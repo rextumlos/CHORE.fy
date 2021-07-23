@@ -21,27 +21,22 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
+            android:tint="@color/dark_teal"
             android:background="@drawable/button_border"
             android:contentDescription="@null"
             android:padding="26dp"
             android:scaleType="fitCenter"
-
-
             app:srcCompat="@drawable/menu_icon" />
-
-
 
         <ImageButton
             android:id="@+id/imgBtnHome"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1.5"
+            android:tint="@color/dark_teal"
             android:background="@drawable/button_border"
             android:contentDescription="@null"
-
             app:srcCompat="@drawable/home_icon" />
-
-
 
         <ImageButton
             android:id="@+id/imgBtnSettings"
@@ -93,9 +88,6 @@
             android:orientation="horizontal">
 
             <ImageView
-
-                android:layout_marginTop="7dp"
-
                 android:id="@+id/image_view_night_mode"
                 android:contentDescription="@null"
                 android:layout_width="60dp"
@@ -108,12 +100,8 @@
                 android:id="@+id/switch_night_mode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-
                 android:layout_marginStart="0dp"
-
                 android:layout_marginTop="10dp"
-
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="15dp"
                 android:text="@string/night_mode_string"

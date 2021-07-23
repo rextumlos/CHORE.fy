@@ -39,6 +39,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1.5"
+            android:tint="@color/dark_teal"
             android:background="@drawable/button_border"
             android:contentDescription="@null"
             app:srcCompat="@drawable/home_icon" />
@@ -48,6 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
+            android:tint="@color/dark_teal"
             android:background="@drawable/button_border"
             android:contentDescription="@null"
             android:padding="19dp"
