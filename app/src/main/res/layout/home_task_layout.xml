@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="45dp"
     app:cardElevation="5dp"
     android:layout_marginVertical="8dp"
     android:backgroundTint="@color/dark_teal">
@@ -18,11 +18,18 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <CheckBox
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"/>
+
+            <!--<CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white">
-            </CheckBox>
+            </CheckBox>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -37,15 +44,75 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Due:"
+                        android:text="@string/due_string"
+                        android:textStyle="bold"
                         android:textSize="14sp"
-                        android:paddingEnd="10dp"/>
+                        android:textColor="@color/white"
+                        android:layout_marginEnd="10dp" />
 
                     <TextView
+                        android:id="@+id/text_view_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_preview_string"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/text_view_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Sat, Jul 23, 2021"
-                        android:textSize="14sp"/>
+                        android:text="    |    hh:mm a"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/text_view_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_name_preview_string"
+                    android:textStyle="bold|italic"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/assigned_to_string"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/text_view_member"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/member_name_preview_string"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
