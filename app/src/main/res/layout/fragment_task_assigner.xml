@@ -232,8 +232,6 @@
             android:textSize="18sp"
             android:gravity="center"/>
 
-
-
     </LinearLayout>
 
 </RelativeLayout>
