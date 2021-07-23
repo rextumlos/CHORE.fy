@@ -10,9 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
+
         <activity android:name=".activity_payment_page"></activity>
         <activity android:name=".activity_recipe_page" />
         <activity android:name=".startup_splash_activity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
