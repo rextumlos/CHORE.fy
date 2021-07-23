@@ -4,23 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.widget.ImageButton;
 
-public class activity_task_assigner_page extends AppCompatActivity {
-
-    private Button cancelBtn, saveBtn;
+public class activity_recipe_page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task_assigner_page);
+        setContentView(R.layout.activity_recipe_page);
 
-        cancelBtn = (Button) findViewById(R.id.btnCancel);
-        cancelBtn.setOnClickListener(v -> openHomeActivity());
+        ImageButton backBtn = (ImageButton) findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(v -> openHomeActivity());
     }
 
     public void openHomeActivity(){
-        Intent intent = new Intent(this, activity_home_page.class);
+        Intent intent = new Intent(this, activity_features_page.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }

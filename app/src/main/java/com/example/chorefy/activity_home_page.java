@@ -1,30 +1,36 @@
 package com.example.chorefy;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 public class activity_home_page extends AppCompatActivity {
 
     private ImageButton featuresBtn, settingsBtn;
-    private Button taskBtn;
+    private Button addTaskBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        featuresBtn = (ImageButton) findViewById(R.id.imgBtnFeatures);
+        featuresBtn = findViewById(R.id.imgBtnFeatures);
         featuresBtn.setOnClickListener(v -> openFeaturesActivity());
 
-        settingsBtn = (ImageButton) findViewById(R.id.imgBtnSettings);
+        settingsBtn = findViewById(R.id.imgBtnSettings);
         settingsBtn.setOnClickListener(v -> openSettingsActivity());
 
-        taskBtn = (Button) findViewById(R.id.btnAddTask);
-        taskBtn.setOnClickListener(v -> openTaskAssignerActivity());
+        addTaskBtn = findViewById(R.id.btnAddTask);
+        addTaskBtn.setOnClickListener(v -> openTaskAssigner());
     }
 
     public void openFeaturesActivity(){
@@ -39,8 +45,13 @@ public class activity_home_page extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openTaskAssignerActivity(){
-        Intent intent = new Intent(this, activity_task_assigner_page.class);
-        startActivity(intent);
+    public void openTaskAssigner(){
+        TaskAssigner fragment = new TaskAssigner();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_from_right,R.anim.enter_from_right,R.anim.exit_from_right);
+        ft.addToBackStack(null);
+        ft.add(R.id.fragment_task_assigner, fragment, "TASK ASSIGNER").commit();
     }
+
 }

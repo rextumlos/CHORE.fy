@@ -21,27 +21,22 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
+            android:tint="@color/dark_teal"
             android:background="@drawable/button_border"
             android:contentDescription="@null"
             android:padding="26dp"
             android:scaleType="fitCenter"
-
-
             app:srcCompat="@drawable/menu_icon" />
-
-
 
         <ImageButton
             android:id="@+id/imgBtnHome"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1.5"
+            android:tint="@color/dark_teal"
             android:background="@drawable/button_border"
             android:contentDescription="@null"
-
             app:srcCompat="@drawable/home_icon" />
-
-
 
         <ImageButton
             android:id="@+id/imgBtnSettings"
@@ -93,9 +88,6 @@
             android:orientation="horizontal">
 
             <ImageView
-
-                android:layout_marginTop="7dp"
-
                 android:id="@+id/image_view_night_mode"
                 android:contentDescription="@null"
                 android:layout_width="60dp"
@@ -108,12 +100,8 @@
                 android:id="@+id/switch_night_mode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-
                 android:layout_marginStart="0dp"
-
                 android:layout_marginTop="10dp"
-
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="15dp"
                 android:text="@string/night_mode_string"
@@ -153,7 +141,7 @@
                 android:layout_height="55dp"
                 android:layout_marginStart="38dp"
                 android:layout_marginEnd="12dp"
-                android:src="@drawable/notifications_icon"
+                app:srcCompat="@drawable/notifications_icon"
                 app:tint="@color/dark_gray"/>
 
             <LinearLayout
@@ -222,16 +210,33 @@
             android:textSize="14sp"
             android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/text_view_app_name"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="@string/app_name"
-            android:textColor="@color/light_teal"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_baseline_home_work_24"
+                app:tint="@color/light_gray" />
+
+            <TextView
+                android:id="@+id/text_view_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="@string/app_name"
+                android:textColor="@color/light_teal"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/text_view_developers"
