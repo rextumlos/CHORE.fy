@@ -20,6 +20,16 @@
 
     <!--Task Assigner Page-->
     <string name="task_assigner_title">TASK ASSIGNER</string>
-    <string name="cancel_string">Cancel</string>
-    <string name="features">FEATURES</string>
+    <string name="task_name_string">Task Name:</string>
+    <string name="task_name_hint_string">e.g. Wash Dishes</string>
+    <string name="set_date_string">Set Date</string>
+    <string name="set_time_string">Set Time</string>
+    <string name="assign_member_string">Assign Member:</string>
+    <string name="assign_member_hint_string">e.g. Jason</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

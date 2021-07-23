@@ -11,14 +11,13 @@
         android:theme="@style/Theme.Design.NoActionBar">
 
         <activity android:name=".activity_settings_page"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
 
         <activity android:name=".activity_features_page"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
 
         <activity android:name=".activity_home_page"
-            android:screenOrientation="fullSensor">
-
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
