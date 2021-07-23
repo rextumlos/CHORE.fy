@@ -34,11 +34,11 @@ public class activity_features_page extends AppCompatActivity {
         cardGrocery = findViewById(R.id.cardGrocery);
         cardPayment = findViewById(R.id.cardPayment);
 
-        cardRecipe.setOnClickListener(view -> showToast("Recipe Clicked"));
+        cardRecipe.setOnClickListener(view -> openRecipeActivity());
 
         cardGrocery.setOnClickListener(view -> openGroceryActivity());
 
-        cardPayment.setOnClickListener(view -> showToast("Payment Clicked"));
+        cardPayment.setOnClickListener(view -> openPaymentActivity());
     }
 
 
@@ -54,14 +54,24 @@ public class activity_features_page extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void showToast(String message){
-
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
 
     public void openGroceryActivity(){
         Intent intent = new Intent(this, activity_grocery.class);
         startActivity(intent);
     }
+
+    public void openRecipeActivity(){
+        Intent intent = new Intent(this, activity_recipe_page.class);
+        startActivity(intent);
+    }
+
+    public void openPaymentActivity(){
+        Intent intent = new Intent(this, activity_payment_page.class);
+        startActivity(intent);
+    }
+
+
+
+
 
 }
