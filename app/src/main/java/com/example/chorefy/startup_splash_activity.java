@@ -18,7 +18,7 @@ public class startup_splash_activity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(startup_splash_activity.this , activity_home_page.class));
+                startActivity(new Intent(startup_splash_activity.this , activity_nav_main.class));
                 finish();
             }
         }, 3000);

@@ -39,9 +39,15 @@
     <string name="due_string">Due:</string>
     <string name="assigned_to_string">Assigned To:</string>
 
-
     <string name="cancel_string">Cancel</string>
     <string name="features">FEATURES</string>
     <string name="grocery_list_page">GROCERY LIST</string>
+
+    <!--Navigation-->
+    <string name="home_text">CHORE.fy</string>
+    <string name="feature_text">Feature</string>
+    <string name="settings_text">Settings</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

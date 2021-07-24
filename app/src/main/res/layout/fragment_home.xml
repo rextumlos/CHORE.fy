@@ -1,57 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE"
-    tools:context=".activity_home_page">
-
-    <!--Navigation Buttons-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imgBtnFeatures"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
-            android:contentDescription="@null"
-            android:padding="26dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/menu_icon"
-            android:tint="@color/dark_teal"/>
-
-        <ImageButton
-            android:id="@+id/imgBtnHome"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1.5"
-            android:background="@drawable/button_border"
-            android:backgroundTint="@color/dark_teal"
-            android:contentDescription="@null"
-            app:srcCompat="@drawable/home_icon"
-            android:tint="@android:color/white"/>
-
-        <ImageButton
-            android:id="@+id/imgBtnSettings"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
-            android:contentDescription="@null"
-            android:padding="19dp"
-            android:scaleType="fitCenter"
-            android:tint="@color/dark_teal"
-            app:srcCompat="@drawable/settings_icon" />
-
-    </LinearLayout>
+    android:background="@color/default_bGrd"
+    tools:context=".HomeFragment">
 
     <!--Page Action Bar-->
     <LinearLayout
@@ -98,7 +51,7 @@
         android:id="@+id/btnAddTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_gravity="center"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:background="@drawable/radius_border_button"
@@ -114,4 +67,6 @@
         android:layout_height="match_parent">
     </FrameLayout>
 
-</RelativeLayout>
+
+
+</FrameLayout>

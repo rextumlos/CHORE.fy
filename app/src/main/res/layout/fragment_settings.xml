@@ -1,65 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE"
-    tools:context=".activity_settings_page">
-
-    <!--Navigation Buttons-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imgBtnFeatures"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:tint="@color/dark_teal"
-            android:background="@drawable/button_border"
-            android:contentDescription="@null"
-            android:padding="26dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/menu_icon" />
-
-        <ImageButton
-            android:id="@+id/imgBtnHome"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1.5"
-            android:tint="@color/dark_teal"
-            android:background="@drawable/button_border"
-            android:contentDescription="@null"
-            app:srcCompat="@drawable/home_icon" />
-
-        <ImageButton
-            android:id="@+id/imgBtnSettings"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
-            android:backgroundTint="@color/dark_teal"
-            android:contentDescription="@null"
-            android:padding="19dp"
-            android:scaleType="fitCenter"
-            android:tint="@color/white"
-            app:srcCompat="@drawable/settings_icon" />
-
-    </LinearLayout>
+    tools:context=".SettingsFragment"
+    android:background="@color/default_bGrd">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:orientation="vertical">
 
@@ -93,7 +43,7 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="30dp"
-                app:srcCompat="@drawable/night_mode_icon"
+                android:src="@drawable/night_mode_icon"
                 app:tint="@color/dark_gray" />
 
             <androidx.appcompat.widget.SwitchCompat
@@ -222,6 +172,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/ic_baseline_home_work_24"
+                android:contentDescription="@null"
                 app:tint="@color/light_gray" />
 
             <TextView
@@ -259,4 +210,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</FrameLayout>

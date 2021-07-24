@@ -3,11 +3,11 @@ package com.example.chorefy;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.text.format.DateFormat;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -18,62 +18,35 @@ import java.util.Calendar;
 import android.text.TextWatcher;
 import android.text.Editable;
 
-public class TaskAssigner extends Fragment {
+public class TaskAssigner extends AppCompatActivity {
 
     private ImageButton returnBtn;
     private Button setDateBtn, setTimeBtn;
     private EditText dateText, timeText, taskNameET, memberET;
     private TextView dateTV, timeTV, taskNameTV, memberTV;
 
-/*    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    private String mParam1;
-    private String mParam2;
 
-    public TaskAssigner() {
-        // Required empty public constructor
-    }
-
-    public static TaskAssigner newInstance(String param1, String param2) {
-        TaskAssigner fragment = new TaskAssigner();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }*/
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_task_assigner, container, false);
+        setContentView(R.layout.fragment_task_assigner);
 
-        returnBtn = view.findViewById(R.id.imgBtnReturn);
+        returnBtn = findViewById(R.id.imgBtnReturn);
         returnBtn.setOnClickListener(v -> returnToHomeActivity());
 
-        setDateBtn = view.findViewById(R.id.btnSetDate);
+        setDateBtn = findViewById(R.id.btnSetDate);
         setDateBtn.setOnClickListener(v -> setDate());
 
-        setTimeBtn = view.findViewById(R.id.btnSetTime);
+        setTimeBtn = findViewById(R.id.btnSetTime);
         setTimeBtn.setOnClickListener(v -> setTime());
 
-        dateText = view.findViewById(R.id.editTxtSetDate);
-        timeText = view.findViewById(R.id.editTxtSetTime);
+        dateText = findViewById(R.id.editTxtSetDate);
+        timeText = findViewById(R.id.editTxtSetTime);
 
         //Real Time Text Tracking
-        taskNameET = ((EditText) view.findViewById(R.id.edit_text_task_name));
-        taskNameTV = ((TextView) view.findViewById(R.id.text_view_task_preview));
+        taskNameET = findViewById(R.id.edit_text_task_name);
+        taskNameTV = findViewById(R.id.text_view_task_preview);
 
         taskNameET.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {   //Convert the Text to String
@@ -88,7 +61,7 @@ public class TaskAssigner extends Fragment {
             }
         });
 
-        dateTV = ((TextView) view.findViewById(R.id.text_view_date_preview));
+        dateTV = findViewById(R.id.text_view_date_preview);
 
         dateText.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {   //Convert the Text to String
@@ -103,7 +76,7 @@ public class TaskAssigner extends Fragment {
             }
         });
 
-        timeTV = ((TextView) view.findViewById(R.id.text_view_time_preview));
+        timeTV = findViewById(R.id.text_view_time_preview);
 
         timeText.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {   //Convert the Text to String
@@ -118,8 +91,8 @@ public class TaskAssigner extends Fragment {
             }
         });
 
-        memberET = (EditText) view.findViewById(R.id.edit_text_member);
-        memberTV = (TextView) view.findViewById(R.id.text_view_member_preview);
+        memberET = findViewById(R.id.edit_text_member);
+        memberTV = findViewById(R.id.text_view_member_preview);
 
         memberET.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {   //Convert the Text to String
@@ -134,12 +107,11 @@ public class TaskAssigner extends Fragment {
             }
         });
 
-        return view;
     }
 
     //Return to Activity when clicking Back
     public void returnToHomeActivity(){
-        getActivity().onBackPressed();
+        this.onBackPressed();
     }
 
     public void setDate(){
@@ -150,7 +122,7 @@ public class TaskAssigner extends Fragment {
         int MONTH = calendar.get(Calendar.MONTH);
         int DATE = calendar.get(Calendar.DATE);
 
-        DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int date) {
 
@@ -174,7 +146,7 @@ public class TaskAssigner extends Fragment {
         int HOUR = calendar.get(Calendar.HOUR);
         int MINUTE = calendar.get(Calendar.MINUTE);
 
-        TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+        TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hour, int minute) {
 

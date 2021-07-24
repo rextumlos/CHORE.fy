@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_feature"
+        android:title="Features"
+        android:icon="@drawable/nav_menu"
+        />
+
+    <item android:id="@+id/item_CHORE.fy"
+        android:title="CHORE.fy"
+        android:icon="@drawable/nav_home"
+        />
+
+    <item android:id="@+id/item_settings"
+        android:title="Settings"
+        android:icon="@drawable/nav_settings"
+        />
+
+
+
+
+</menu>
