@@ -61,7 +61,7 @@ public class activity_grocery extends AppCompatActivity implements OnDialogClose
     }
 
     public void openHomeActivity(){
-        Intent intent = new Intent(this, activity_features_page.class);
+        Intent intent = new Intent(this, activity_nav_main.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }

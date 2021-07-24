@@ -1,6 +1,5 @@
 package com.example.chorefy.Adapter;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,27 +9,26 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.chorefy.HomeFragment;
 import com.example.chorefy.Model.HomeTaskModel;
 import com.example.chorefy.R;
 import com.example.chorefy.TaskAssigner;
 import com.example.chorefy.Utils.DataBaseHelper2;
-import com.example.chorefy.activity_home_page;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeTaskAdapter extends RecyclerView.Adapter<HomeTaskAdapter.MyViewHolder2> {
 
     private List<HomeTaskModel> mList;
-    private activity_home_page activity;
+    private HomeFragment activity;
     private DataBaseHelper2 myDB;
 
-    public HomeTaskAdapter(DataBaseHelper2 myDB, activity_home_page activity){
+    public HomeTaskAdapter(DataBaseHelper2 myDB, HomeFragment activity){
         this.activity = activity;
         this.myDB = myDB;
     }
@@ -70,7 +68,7 @@ public class HomeTaskAdapter extends RecyclerView.Adapter<HomeTaskAdapter.MyView
         return num != 0;
     }
 
-    public Context getContext2(){
+    public HomeFragment getContext2(){
         return activity;
     }
 
@@ -98,7 +96,7 @@ public class HomeTaskAdapter extends RecyclerView.Adapter<HomeTaskAdapter.MyView
 
         TaskAssigner task = new TaskAssigner();
         task.setArguments(bundle);
-        task.show(activity.getSupportFragmentManager(), task.getTag());
+        task.show(activity.getFragmentManager(), task.getTag());
     }
 
     @Override
@@ -120,4 +118,7 @@ public class HomeTaskAdapter extends RecyclerView.Adapter<HomeTaskAdapter.MyView
             mMemberTextView = itemView.findViewById(R.id.text_view_member);
         }
     }
+
+
+
 }

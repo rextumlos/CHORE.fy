@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".activity_nav_main"></activity>
 
         <activity android:name=".startup_splash_activity">
             <intent-filter>
@@ -18,32 +19,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity_payment_page"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".activity_recipe_page"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".activity_grocery"
             android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity_settings_page"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity_features_page"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity_home_page"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustNothing"/>
-
+        <activity android:name=".TaskAssigner"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

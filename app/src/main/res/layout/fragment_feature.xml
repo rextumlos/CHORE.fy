@@ -1,92 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEEEE"
-
-    tools:context=".activity_home_page">
-
-    <!--Navigation Buttons-->
-    <LinearLayout
-        android:id="@+id/mainBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/imgBtnFeatures"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_border"
-            android:backgroundTint="@color/dark_teal"
-            android:tint="@color/white"
-            android:contentDescription="@null"
-            android:padding="26dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/menu_icon"/>
-
-        <ImageButton
-            android:id="@+id/imgBtnHome"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1.5"
-            android:tint="@color/dark_teal"
-            android:background="@drawable/button_border"
-            android:contentDescription="@null"
-            app:srcCompat="@drawable/home_icon" />
-
-        <ImageButton
-            android:id="@+id/imgBtnSettings"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:tint="@color/dark_teal"
-            android:background="@drawable/button_border"
-            android:contentDescription="@null"
-            android:padding="19dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/settings_icon" />
-
-    </LinearLayout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/default_bGrd"
+    tools:context=".FeatureFragment">
 
 
     <TextView
         android:id="@+id/text_view_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="15dp"
         android:text="@string/features_page_title"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal" />
 
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="57dp"
         android:layout_marginEnd="30dp"
-        android:background="#2B7A87"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#2B7A87" />
 
-    <!--Feature Buttons-->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -121,7 +62,7 @@
                     android:layout_width="160dp"
                     android:layout_height="175dp"
                     android:contentDescription="@null"
-                    app:srcCompat="@drawable/recipe_icon_feature" />
+                    android:src="@drawable/recipe_icon_feature" />
 
             </LinearLayout>
 
@@ -152,7 +93,7 @@
                     android:layout_width="160dp"
                     android:layout_height="175dp"
                     android:contentDescription="@null"
-                    app:srcCompat="@drawable/grocery_icon_feature" />
+                    android:src="@drawable/grocery_icon_feature" />
 
             </LinearLayout>
 
@@ -168,6 +109,7 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_margin="8dp"
+            android:elevation="8dp"
             app:cardBackgroundColor="#FFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
@@ -183,7 +125,7 @@
                     android:layout_width="160dp"
                     android:layout_height="175dp"
                     android:contentDescription="@null"
-                    app:srcCompat="@drawable/payment_icon_feature" />
+                    android:src="@drawable/payment_icon_feature" />
 
             </LinearLayout>
 
@@ -191,4 +133,4 @@
 
     </GridLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
