@@ -1,12 +1,12 @@
 package com.example.chorefy.Utils;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
 import com.example.chorefy.Model.HomeTaskModel;
 
@@ -27,7 +27,7 @@ public class DataBaseHelper2 extends SQLiteOpenHelper {
     private static final String COL_6 = "MEMBER";
 
 
-    public DataBaseHelper2(@Nullable Context context) {
+    public DataBaseHelper2(@Nullable FragmentActivity context) {
         super(context, DATABASE_NAME, null, 1);
     }
 

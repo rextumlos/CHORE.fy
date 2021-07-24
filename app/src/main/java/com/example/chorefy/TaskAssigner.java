@@ -10,6 +10,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,12 +25,14 @@ import android.widget.TimePicker;
 import java.util.Calendar;
 import android.text.TextWatcher;
 import android.text.Editable;
+import android.widget.Toast;
+
 import com.example.chorefy.Model.HomeTaskModel;
 import com.example.chorefy.Utils.DataBaseHelper2;
 
 import org.jetbrains.annotations.NotNull;
 
-public class TaskAssigner extends DialogFragment {
+public class TaskAssigner extends DialogFragment{
 
     private ImageButton returnBtn, saveBtn;
     private Button setDateBtn, setTimeBtn;
@@ -275,16 +279,19 @@ public class TaskAssigner extends DialogFragment {
     }
 
     @Override
-    public void onDismiss(@NonNull DialogInterface dialog) {
+    public void onDismiss(@NonNull final DialogInterface dialog) {
         super.onDismiss(dialog);
-        Activity activity = getActivity();
-        if(activity instanceof OnDialogCloseListener2){
-            ((OnDialogCloseListener2)activity).onDialogClose(dialog);
+        final Activity activity = getActivity();
+        if (activity instanceof OnDialogCloseListener2){
+            ((OnDialogCloseListener2) activity).onDialogClose(dialog);
         }
+        dialog.dismiss();
+
     }
 
     //Return to Activity when clicking Back
     public void returnToHomeActivity(){
+
         dismiss();
     }
 

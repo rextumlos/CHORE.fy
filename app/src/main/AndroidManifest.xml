@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
         <activity android:name=".activity_nav_main"></activity>
+
         <activity android:name=".startup_splash_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
