@@ -103,6 +103,7 @@
                 android:layout_marginEnd="5dp"
                 android:backgroundTint="@color/white"
                 android:hint="@string/task_name_hint_string"
+                android:textColor="@color/white"
                 android:textColorHint="@color/light_gray"
                 android:singleLine="true"
                 android:inputType="text"
@@ -133,6 +134,7 @@
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/button_border_edges"
                     android:text="@string/set_date_string"
+                    android:textColor="@color/white"
                     android:textSize="18sp" />
 
                 <EditText
@@ -165,6 +167,7 @@
                     android:layout_marginStart="10dp"
                     android:background="@drawable/button_border_edges"
                     android:text="@string/set_time_string"
+                    android:textColor="@color/white"
                     android:textSize="18sp"/>
 
                 <EditText
@@ -217,6 +220,7 @@
                 android:layout_marginEnd="5dp"
                 android:backgroundTint="@color/white"
                 android:hint="@string/assign_member_hint_string"
+                android:textColor="@color/white"
                 android:textColorHint="@color/light_gray"
                 android:singleLine="true"
                 android:inputType="text"
@@ -254,13 +258,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioButton
+                <CheckBox
+                    android:id="@+id/check_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/white"
                     android:layout_gravity="center_vertical"
                     android:layout_marginEnd="5dp"
-                    android:enabled="false"/>
+                    android:enabled="false">
+                </CheckBox>
 
                 <LinearLayout
                     android:layout_width="match_parent"
