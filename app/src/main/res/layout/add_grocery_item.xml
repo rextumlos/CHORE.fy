@@ -9,6 +9,8 @@
         android:id="@+id/edittext"
         android:paddingStart="7dp"
         android:paddingEnd="7dp"
+        android:singleLine="true"
+        android:inputType="text"
         android:hint="Enter New Task"/>
 
     <Button
