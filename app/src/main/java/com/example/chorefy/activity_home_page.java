@@ -3,15 +3,35 @@ package com.example.chorefy;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class activity_home_page extends AppCompatActivity {
+import com.example.chorefy.Adapter.HomeTaskAdapter;
+import com.example.chorefy.Model.HomeTaskModel;
+import com.example.chorefy.Utils.DataBaseHelper;
+import com.example.chorefy.Utils.DataBaseHelper2;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+public class activity_home_page extends AppCompatActivity implements OnDialogCloseListener2 {
 
     private ImageButton featuresBtn, settingsBtn;
     private Button addTaskBtn;
+    private RecyclerView mRecyclerview;
+    private DataBaseHelper2 myDB;
+    private List<HomeTaskModel> mList;
+    private HomeTaskAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +45,29 @@ public class activity_home_page extends AppCompatActivity {
         settingsBtn.setOnClickListener(v -> openSettingsActivity());
 
         addTaskBtn = findViewById(R.id.btnAddTask);
-        addTaskBtn.setOnClickListener(v -> openTaskAssigner());
+
+        addTaskBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TaskAssigner.newInstance().show(getSupportFragmentManager(), TaskAssigner.TAG);
+            }
+        });
+
+        mRecyclerview = findViewById(R.id.recycler_view_home);
+        myDB = new DataBaseHelper2(activity_home_page.this);
+        mList = new ArrayList<>();
+        adapter = new HomeTaskAdapter(myDB, activity_home_page.this);
+
+        mRecyclerview.setHasFixedSize(true);
+        mRecyclerview.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerview.setAdapter(adapter);
+
+        mList = myDB.getAllTasks2();
+        Collections.reverse(mList);
+        adapter.setTasks2(mList);
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new RecyclerViewTouchHelper_Home(adapter));
+        itemTouchHelper.attachToRecyclerView(mRecyclerview);
     }
 
     public void openFeaturesActivity(){
@@ -40,13 +82,11 @@ public class activity_home_page extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openTaskAssigner(){
-        TaskAssigner fragment = new TaskAssigner();
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.setCustomAnimations(R.anim.enter_from_right,R.anim.exit_from_right,R.anim.enter_from_right,R.anim.exit_from_right);
-        ft.addToBackStack(null);
-        ft.add(R.id.fragment_task_assigner, fragment, "TASK ASSIGNER").commit();
+    @Override
+    public void onDialogClose(DialogInterface dialogInterface) {
+        mList = myDB.getAllTasks2();
+        Collections.reverse(mList);
+        adapter.setTasks2(mList);
+        adapter.notifyDataSetChanged();
     }
-
 }

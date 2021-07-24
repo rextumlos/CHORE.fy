@@ -9,6 +9,7 @@
 
     <!--Navigation Buttons-->
     <LinearLayout
+        android:id="@+id/linear_layout_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -57,8 +58,9 @@
     <LinearLayout
         android:id="@+id/linear_layout_divider"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnAddTask"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -85,11 +87,11 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_home"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="30dp"
             android:layout_below="@id/view_divider"
-            android:nestedScrollingEnabled="true"
-            android:stateListAnimator="@null"/>
+            android:nestedScrollingEnabled="true" />
 
     </LinearLayout>
 
@@ -98,7 +100,9 @@
         android:id="@+id/btnAddTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/linear_layout_navigation"
+        android:layout_marginBottom="20dp"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:background="@drawable/radius_border_button"
