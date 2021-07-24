@@ -31,8 +31,12 @@ public class activity_grocery extends AppCompatActivity implements OnDialogClose
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grocery);
 
-        ImageButton backBtn = (ImageButton) findViewById(R.id.backBtn);
+        ImageButton backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(v -> openHomeActivity());
+
+//      Information Button
+        ImageButton infoBtn = findViewById(R.id.infoBtn);
+        infoBtn.setOnClickListener(view -> openDialog());
 
         RecyclerView mRecyclerview = findViewById(R.id.recyclerview);
 
@@ -68,5 +72,10 @@ public class activity_grocery extends AppCompatActivity implements OnDialogClose
         Collections.reverse(mList);
         adapter.setTasks(mList);
         adapter.notifyDataSetChanged();
+    }
+
+    public void openDialog(){
+        InfoDialogGrocery infoDialogGrocery = new InfoDialogGrocery();
+        infoDialogGrocery.show(getSupportFragmentManager(), "Info Dialog");
     }
 }
