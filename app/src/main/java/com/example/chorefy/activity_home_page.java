@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +34,7 @@ public class activity_home_page extends AppCompatActivity implements OnDialogClo
     private List<HomeTaskModel> mList;
     private HomeTaskAdapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,9 @@ public class activity_home_page extends AppCompatActivity implements OnDialogClo
                 TaskAssigner.newInstance().show(getSupportFragmentManager(), TaskAssigner.TAG);
             }
         });
+
+        ImageButton imgBtn = findViewById(R.id.infoBtn);
+        imgBtn.setOnClickListener(view -> openDialog());
 
         mRecyclerview = findViewById(R.id.recycler_view_home);
         myDB = new DataBaseHelper2(activity_home_page.this);
@@ -88,5 +93,10 @@ public class activity_home_page extends AppCompatActivity implements OnDialogClo
         Collections.reverse(mList);
         adapter.setTasks2(mList);
         adapter.notifyDataSetChanged();
+    }
+
+    public void openDialog(){
+        InfoDialogGrocery infoDialogGrocery = new InfoDialogGrocery();
+        infoDialogGrocery.show(getSupportFragmentManager(), "Info Dialog");
     }
 }

@@ -51,16 +51,16 @@
 
     <!--Info Button-->
     <ImageButton
-        android:id="@+id/infoBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_info_24"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="10dp"
-        android:backgroundTint="@android:color/transparent"
-        android:tint="@color/darker_teal"
-        android:elevation="1dp"
-        android:contentDescription="@null"/>
+    android:id="@+id/infoBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_baseline_info_24"
+    android:layout_alignParentEnd="true"
+    android:layout_margin="10dp"
+    android:backgroundTint="@android:color/transparent"
+    android:tint="@color/darker_teal"
+    android:elevation="1dp"
+    android:contentDescription="@null"/>
 
     <!--Recycle View-->
     <androidx.recyclerview.widget.RecyclerView
