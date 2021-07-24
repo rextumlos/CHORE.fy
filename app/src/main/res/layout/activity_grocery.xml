@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEEEEE"
-    tools:context=".activity_home_page">
+    tools:context=".activity_nav_main">
 
     <!--Page Action Bar-->
     <LinearLayout
