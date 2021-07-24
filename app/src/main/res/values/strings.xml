@@ -23,9 +23,21 @@
     <string name="task_name_string">Task Name:</string>
     <string name="task_name_hint_string">e.g. Wash Dishes</string>
     <string name="set_date_string">Set Date</string>
+    <string name="set_date_hint_string">---, --- --, ----</string>
     <string name="set_time_string">Set Time</string>
+    <string name="set_time_hint_string">-:-  --</string>
     <string name="assign_member_string">Assign Member:</string>
     <string name="assign_member_hint_string">e.g. Jason</string>
+
+    <string name="preview_string">Preview</string>
+    <string name="date_preview_string">eee, mmm dd, yyyy</string>
+    <string name="time_preview_string">    |    hh:mm a</string>
+    <string name="task_name_preview_string">TASK NAME</string>
+    <string name="member_name_preview_string">Member Name</string>
+
+    <!--Home Task Card-->
+    <string name="due_string">Due:</string>
+    <string name="assigned_to_string">Assigned To:</string>
 
 
     <string name="cancel_string">Cancel</string>

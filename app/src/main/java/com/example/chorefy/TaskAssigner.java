@@ -2,11 +2,8 @@ package com.example.chorefy;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,20 +12,20 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
-
-import java.sql.Time;
 import java.util.Calendar;
-
+import android.text.TextWatcher;
+import android.text.Editable;
 
 public class TaskAssigner extends Fragment {
 
     private ImageButton returnBtn;
     private Button setDateBtn, setTimeBtn;
-    private EditText dateText, timeText;
+    private EditText dateText, timeText, taskNameET, memberET;
+    private TextView dateTV, timeTV, taskNameTV, memberTV;
 
-    private static final String ARG_PARAM1 = "param1";
+/*    private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
@@ -54,7 +51,7 @@ public class TaskAssigner extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,12 +69,75 @@ public class TaskAssigner extends Fragment {
         setTimeBtn.setOnClickListener(v -> setTime());
 
         dateText = view.findViewById(R.id.editTxtSetDate);
-
         timeText = view.findViewById(R.id.editTxtSetTime);
+
+        //Real Time Text Tracking
+        taskNameET = ((EditText) view.findViewById(R.id.edit_text_task_name));
+        taskNameTV = ((TextView) view.findViewById(R.id.text_view_task_preview));
+
+        taskNameET.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {   //Convert the Text to String
+                String inputText = taskNameET.getText().toString();
+                taskNameTV.setText(inputText);
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // TODO Auto-generated method stub
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+            }
+        });
+
+        dateTV = ((TextView) view.findViewById(R.id.text_view_date_preview));
+
+        dateText.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {   //Convert the Text to String
+                String inputText = dateText.getText().toString();
+                dateTV.setText(inputText);
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // TODO Auto-generated method stub
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+            }
+        });
+
+        timeTV = ((TextView) view.findViewById(R.id.text_view_time_preview));
+
+        timeText.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {   //Convert the Text to String
+                String inputText = "    |    " + timeText.getText().toString();
+                timeTV.setText(inputText);
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // TODO Auto-generated method stub
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+            }
+        });
+
+        memberET = (EditText) view.findViewById(R.id.edit_text_member);
+        memberTV = (TextView) view.findViewById(R.id.text_view_member_preview);
+
+        memberET.addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {   //Convert the Text to String
+                String inputText = memberET.getText().toString();
+                memberTV.setText(inputText);
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // TODO Auto-generated method stub
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+            }
+        });
 
         return view;
     }
 
+    //Return to Activity when clicking Back
     public void returnToHomeActivity(){
         getActivity().onBackPressed();
     }
